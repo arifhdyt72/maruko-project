@@ -12,7 +12,7 @@ RUN apk add --no-cache ca-certificates curl
 
 WORKDIR /app
 COPY --from=builder /app/chibi-maruko .
-COPY --from=builder /app/static ./static
+COPY static ./static
 EXPOSE 5544
 
 CMD ["./chibi-maruko"]

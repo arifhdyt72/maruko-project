@@ -5,8 +5,6 @@ services:
     image: arifhdyt72/maruko-project:latest
     ports:
       - "5544:5544"
-    volumes:
-      - /opt/maruko/static:/app/static
     deploy:
       mode: replicated
       replicas: 2
