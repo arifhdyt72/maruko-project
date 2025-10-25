@@ -1,0 +1,12 @@
+name: maruko-project
+
+services:
+  maruko-project:
+    container_name: maruko-project
+    platform: linux/amd64
+    image: arifhdyt72/maruko-project:latest
+    ports:
+      - "5544:5544"
+    volumes:
+      - ./static:/app/static
+    restart: unless-stopped
