@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 )
@@ -53,6 +54,15 @@ func main() {
 		</html>`
 		w.Header().Set("Content-Type", "text/html")
 		fmt.Fprint(w, html)
+	})
+
+	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		resp := map[string]string{
+			"status":  "ok",
+			"message": "server is running",
+		}
+		json.NewEncoder(w).Encode(resp)
 	})
 
 	fmt.Println("Server running on http://localhost:5544 🎵")
