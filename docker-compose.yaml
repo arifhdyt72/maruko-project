@@ -3,7 +3,6 @@ version: "3.8"
 services:
   maruko-project:
     image: arifhdyt72/maruko-project:latest
-    platform: linux/amd64
     ports:
       - "5544:5544"
     volumes:
