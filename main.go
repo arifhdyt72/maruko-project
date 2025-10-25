@@ -45,9 +45,9 @@ func main() {
 		</head>
 		<body>
 			<h1>🎶 Maruko Style 🎶</h1>
-			<img src="/static/maruko.gif" alt="Chibi Maruko Chan">
+			<img src="./static/maruko.gif" alt="Chibi Maruko Chan">
 			<audio autoplay controls>
-				<source src="/static/maruko.mp3" type="audio/mpeg">
+				<source src="./static/maruko.mp3" type="audio/mpeg">
 				Your browser does not support the audio element.
 			</audio>
 		</body>
