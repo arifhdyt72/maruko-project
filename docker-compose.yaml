@@ -20,11 +20,11 @@ services:
         delay: 5s
         max_attempts: 5
         window: 30s
-      healthcheck:
-        test: ["CMD", "curl", "-f", "http://localhost:5544/health"]
-        interval: 10s
-        timeout: 5s
-        retries: 3
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5544/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
     logging:
       driver: json-file
       options:
