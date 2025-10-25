@@ -8,7 +8,7 @@ RUN go build -o chibi-maruko main.go
 
 FROM alpine:latest
 
-RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache ca-certificates curl
 
 WORKDIR /app
 COPY --from=builder /app/chibi-maruko .
