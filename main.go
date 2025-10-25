@@ -66,5 +66,5 @@ func main() {
 	})
 
 	fmt.Println("Server running on http://localhost:5544 🎵")
-	http.ListenAndServe(":5544", nil)
+	http.ListenAndServe("0.0.0.0:5544", nil)
 }
