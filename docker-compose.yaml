@@ -7,7 +7,7 @@ services:
       - "5544:5544"
     deploy:
       mode: replicated
-      replicas: 2
+      replicas: 4
       update_config:
         parallelism: 1
         order: start-first
