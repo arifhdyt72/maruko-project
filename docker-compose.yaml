@@ -8,6 +8,9 @@ services:
     deploy:
       mode: replicated
       replicas: 4
+      placement:
+        constraints:
+          - node.role == worker
       update_config:
         parallelism: 1
         order: start-first
